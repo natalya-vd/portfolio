@@ -1,0 +1,110 @@
+.wrapper {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.checkbox-wrapper {
+  position: relative;
+  width: 52px;
+  height: 32px;
+}
+
+.checkbox {
+  appearance: none;
+  position: relative;
+  width: inherit;
+  height: inherit;
+  border-radius: 100px;
+  border: 2px solid var(--outline);
+  background-color: var(--surface-container-highest);
+  transition: 500ms;
+  outline: 0;
+}
+
+.checkbox:checked {
+  background: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+/*--- Switch ---*/
+.switch {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  width: inherit;
+  height: inherit;
+  padding: 3px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid transparent;
+  border-radius: 100px;
+  user-select: none;
+}
+
+.switch-checked::before,
+.switch-unchecked::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 1;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--outline);
+  transition: 500ms;
+}
+.checkbox:hover + .switch-unchecked::before,
+.checkbox:focus-visible + .switch-unchecked::before {
+  background-color: var(--on-surface-variant);
+}
+
+.checkbox:checked + .switch-checked::before {
+  transform: translate(16px, -4px);
+  width: 24px;
+  height: 24px;
+  background-color: var(--on-primary);
+}
+.checkbox:checked:hover + .switch-checked::before,
+.checkbox:checked:focus-visible + .switch-checked::before {
+  background-color: var(--primary-container);
+}
+
+.checkbox:hover + .switch-checked::after,
+.checkbox:hover + .switch-unchecked::after,
+.checkbox:focus-visible + .switch-checked::after,
+.checkbox:focus-visible + .switch-unchecked::after {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  /* z-index: -1; */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--on-surface-variant);
+  transition: all 500ms;
+  opacity: 0.2;
+}
+
+.checkbox:checked:hover + .switch-checked::after,
+.checkbox:checked:focus-visible + .switch-checked::after {
+  transform: translate(22px, 0);
+  background-color: var(--primary-container);
+}
+
+/*--- Иконки ---*/
+.icon-checked,
+.checkbox:checked > .icon-unchecked {
+  display: none;
+}
+
+.icon-unchecked,
+.checkbox:checked > .icon-checked {
+  display: block;
+}
