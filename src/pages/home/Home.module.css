@@ -1,0 +1,26 @@
+.main-section {
+  height: 100vh;
+  margin-top: -60px;
+  padding-top: 120px;
+  color: var(--on-primary-container);
+  border-radius: 0 0 70px 70px;
+  overflow: hidden;
+}
+
+.main-section__wrapper {
+  width: 720px;
+}
+
+.main-section__title {
+  font-size: 100px;
+  line-height: 124px;
+  background-image: linear-gradient(to left, #00ffff,  #6750A4);
+  color: transparent;
+  background-clip: text;
+}
+
+.main-section__subtitle {
+  margin-left: 50px;
+  font-size: 38px;
+  line-height: 60px;
+}
