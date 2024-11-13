@@ -4,7 +4,7 @@ import classnames from 'classnames'
 import { Button } from "@components/button/Button";
 import { useThemeContext } from "@contexts/theme/useContext";
 import { Divider } from "@components/divider/Divider";
-import { Switch } from "@components/switch/Switch";
+import { Switch } from "@shared/switch/Switch";
 
 import styles from './MainLayout.module.css'
 
