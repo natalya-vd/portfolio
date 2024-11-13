@@ -1,0 +1,113 @@
+.container.outlined,
+.container.elevated {
+  position: relative;
+  display: inline-flex;
+  padding: 6px 16px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  color: var(--on-surface-variant);
+}
+
+.container.outlined {
+  border: 1px solid var(--outline);
+}
+
+.container.elevated {
+  box-shadow: var(--elevation-1);
+}
+
+.state.outlined,
+.state.elevated {
+  cursor: pointer;
+}
+
+.state.outlined:focus-visible {
+  border: 1px solid var(--on-surface);
+}
+
+.state.outlined:hover::before,
+.state.outlined:focus-visible::before,
+.state.outlined:disabled::before,
+.state.elevated:hover::before,
+.state.elevated:focus-visible::before,
+.state.elevated:disabled::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.state.outlined:focus-visible::before,
+.state.elevated:focus-visible::before {
+  background-color: var(--on-surface-variant);
+  opacity: 0.12;
+}
+
+.state.outlined:hover::before,
+.state.elevated:hover::before {
+  background-color: var(--on-surface);
+  opacity: 0.08;
+}
+
+.state.outlined:disabled,
+.state.elevated:disabled {
+  cursor: unset;
+  color: var(--on-surface);
+}
+
+.state.outlined:disabled {
+  border: 1px solid var(--on-surface-variant);
+  opacity: 0.38;
+}
+
+.state.elevated:disabled {
+  box-shadow: none;
+  opacity: 0.38;
+}
+
+.state.elevated:disabled::before {
+  background-color: var(--on-surface);
+  opacity: 0.12;
+}
+
+/*--- SELECTED ---*/
+.container.outlined.selected,
+.container.elevated.selected {
+  background-color: var(--secondary-container);
+  color: var(--on-secondary-container);
+}
+
+.container.outlined.selected {
+  border: transparent;
+}
+
+.state.outlined:focus-visible::before,
+.state.elevated:focus-visible::before {
+  background-color: var(--on-secondary-container);
+  opacity: 0.12;
+}
+
+.state.outlined:hover::before,
+.state.elevated:hover::before {
+  background-color: var(--on-secondary-container);
+  opacity: 0.08;
+}
+
+.state.outlined:disabled,
+.state.elevated:disabled {
+  color: var(--on-surface);
+  border: 0;
+  box-shadow: none;
+  opacity: 0.38;
+}
+
+.state.outlined:disabled::before,
+.state.elevated:disabled::before {
+  background-color: var(--on-surface);
+  opacity: 0.12;
+}
