@@ -1,7 +1,7 @@
 import { DetailedHTMLProps, HTMLAttributes } from "react";
 import classnames from 'classnames'
 
-import { Button } from "@components/button/Button";
+import { Button } from "@shared/button/Button";
 import { useThemeContext } from "@contexts/theme/useContext";
 import { Divider } from "@shared/divider/Divider";
 import { Switch } from "@shared/switch/Switch";

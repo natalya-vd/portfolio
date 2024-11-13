@@ -1,7 +1,7 @@
 import { DetailedHTMLProps, ElementType, HTMLAttributes } from "react";
 import classNames from "classnames";
 
-import { Button } from "@components/button/Button";
+import { Button } from "@shared/button/Button";
 import { Card } from "@shared/card/Card";
 import { Chip } from "@shared/chip/Chip";
 

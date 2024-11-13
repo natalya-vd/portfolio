@@ -13,16 +13,15 @@ export const Button = forwardRef(
   ({ children, className, href, appearance = 'filled', ...props }: IButtonProps,
     ref: ForwardedRef<HTMLButtonElement | HTMLAnchorElement>
   ): JSX.Element => {
-    const classes = useMemo(() => classNames(className, styles.button, {
+    const classes = useMemo(() => ({
       [styles.filled]: appearance === 'filled',
       [styles.text]: appearance === 'text',
-      // eslint-disable-next-line react-hooks/exhaustive-deps
     }), [appearance])
 
     return (
       href ? (
         <a
-          className={classes}
+          className={classNames(classes, styles.container, styles.state, className)}
           href={href}
           ref={ref as Ref<HTMLAnchorElement>}
           {...props}
@@ -32,7 +31,7 @@ export const Button = forwardRef(
       )
         : (
           <button
-            className={classes}
+            className={classNames(classes, styles.container, className)}
             ref={ref as Ref<HTMLButtonElement>}
             {...props}
           >
