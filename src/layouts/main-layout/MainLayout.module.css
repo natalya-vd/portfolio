@@ -11,8 +11,7 @@
   z-index: var(--z-index-level-1);
   height: 60px;
   width: 100%;
-  /* background-color: var(--surface);
-  box-shadow: var(--elevation-1); */
+  backdrop-filter: blur(8px);
 }
 
 .header-wrapper {
@@ -40,5 +39,7 @@
 }
 
 .footer {
-  min-height: 60px;
+  min-height: 50vh;
+  color: var(--secondary-fixed);
+  background-color: var(--on-secondary-fixed);
 }

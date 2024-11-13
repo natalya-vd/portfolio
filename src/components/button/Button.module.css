@@ -1,4 +1,6 @@
 .button {
+  display: inline-flex;
+  flex-direction: column;
   border-radius: 100px;
   padding: 10px 24px;
   cursor: pointer;

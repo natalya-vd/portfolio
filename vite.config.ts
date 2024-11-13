@@ -10,6 +10,7 @@ export default defineConfig({
       '@components': path.resolve(__dirname, './src/components'),
       '@layouts': path.resolve(__dirname, './src/layouts'),
       '@contexts': path.resolve(__dirname, './src/contexts'),
+      '@shared': path.resolve(__dirname, './src/shared'),
     },
   },
   plugins: [react()],

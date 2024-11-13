@@ -1,6 +1,7 @@
 .hr {
   border: 0;
 	background-color: var(--outline-variant);
+  margin: 0;
 }
 
 .horizontal {

@@ -1,8 +1,10 @@
 .main-section {
-  height: 100vh;
+  min-height: calc(100vh - 200px);
   margin-top: -60px;
+  margin-bottom: 80px;
   padding-top: 120px;
-  color: var(--on-primary-container);
+  color: var(--secondary-fixed);
+  background-color: var(--on-secondary-fixed);
   border-radius: 0 0 70px 70px;
   overflow: hidden;
 }
@@ -23,4 +25,8 @@
   margin-left: 50px;
   font-size: 38px;
   line-height: 60px;
+}
+
+.projects-section {
+  margin-bottom: 80px;
 }

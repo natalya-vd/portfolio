@@ -2,7 +2,9 @@ import classnames from 'classnames'
 
 import { MainLayout } from '@layouts/main-layout/MainLayout';
 
+
 import styles from './Home.module.css'
+import { Projects } from './Projects';
 
 export const HomePage = (): JSX.Element => {
   return (
@@ -19,8 +21,11 @@ export const HomePage = (): JSX.Element => {
           </div>
         </section>
 
+        <section className={classnames(styles['projects-section'], 'container')}>
+          <Projects />
+        </section>
+
         {/* <section>Опыт</section>
-        <section>Проекты</section>
         <section>Обо мне</section> */}
       </main>
     </MainLayout>
