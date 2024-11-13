@@ -9,21 +9,14 @@ interface IDividerProps extends DetailedHTMLProps<HTMLAttributes<HTMLHRElement>,
 
 export const Divider = ({ appearance = 'horizontal', className, ...props }: IDividerProps): JSX.Element => {
   const classes = useMemo(
-    () => classNames(
-      className,
-      styles.hr,
-      {
-        [styles.horizontal]: appearance === 'horizontal',
-        [styles.vertically]: appearance === 'vertically'
-      }
-    ),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [appearance]
-  )
+    () => ({
+      [styles.horizontal]: appearance === 'horizontal',
+      [styles.vertically]: appearance === 'vertically'
+    }), [appearance])
 
   return (
     <hr
-      className={classes}
+      className={classNames(classes, styles.container, className)}
       {...props}
     />
   );
