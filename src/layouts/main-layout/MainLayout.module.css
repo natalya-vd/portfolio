@@ -40,6 +40,29 @@
 
 .footer {
   min-height: 50vh;
+  padding: var(--spacing-xxl) 0;
   color: var(--secondary-fixed);
   background-color: var(--on-secondary-fixed);
+}
+
+.footer__title {
+  margin-bottom: var(--spacing-xl);
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-l);
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-l);
+}
+
+.footer__item {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: var(--spacing-md);
 }

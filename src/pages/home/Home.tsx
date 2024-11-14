@@ -14,7 +14,7 @@ export const HomePage = (): JSX.Element => {
           <div className={classnames(styles['main-section__wrapper'], 'container')}>
             <p className={classnames(styles['main-section__title'])}>Наталья</p>
             <p className={classnames(styles['main-section__title'])}>Вдовыдченко -</p>
-            <h1 className={classnames(styles['main-section__subtitle'])}>
+            <h1 className={classnames(styles['main-section__subtitle'], 'typography-display-small')}>
               frontend разработчик
               <span>{"{ }"}</span>
             </h1>
