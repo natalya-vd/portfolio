@@ -54,10 +54,6 @@ export const MainLayout = ({ children }: IMainLayoutProps): JSX.Element => {
                   <span>E-mail</span>
                   <a href="mailto:natasha-vd@yandex.ru">natasha-vd@yandex.ru</a>
                 </li>
-                <li className={classnames(styles['footer__item'])}>
-                  <span>Телефон</span>
-                  <a href="tel:+9015169905">+7-901-516-99-05</a>
-                </li>
               </ul>
             </div>
           </div>

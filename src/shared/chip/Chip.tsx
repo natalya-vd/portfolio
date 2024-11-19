@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { DetailedHTMLProps, ElementType, HTMLAttributes, useMemo } from "react";
+import { DetailedHTMLProps, ElementType, ForwardedRef, forwardRef, HTMLAttributes, useMemo } from "react";
 
 import styles from './Chip.module.css'
 
@@ -10,7 +10,7 @@ interface IChipProps extends DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTML
   clickable?: boolean
 }
 
-export const Chip = ({
+export const Chip = forwardRef(({
   tag = 'div',
   appearance = 'outlined',
   selected = false,
@@ -18,7 +18,8 @@ export const Chip = ({
   className,
   children,
   ...props
-}: IChipProps): JSX.Element => {
+}: IChipProps,
+  ref: ForwardedRef<HTMLElement>): JSX.Element => {
   const Component = clickable ? 'button' : tag as ElementType
 
   const classes = useMemo(() => ({
@@ -30,6 +31,7 @@ export const Chip = ({
 
   return (
     <Component
+      ref={ref}
       className={classNames(classes, styles.container, className, 'typography-label-large')}
       {...(clickable ? { type: 'button' } : {})}
       {...props}
@@ -37,4 +39,4 @@ export const Chip = ({
       {children}
     </Component>
   );
-}
+})

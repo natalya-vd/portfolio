@@ -11,6 +11,8 @@ export default defineConfig({
       '@layouts': path.resolve(__dirname, './src/layouts'),
       '@contexts': path.resolve(__dirname, './src/contexts'),
       '@shared': path.resolve(__dirname, './src/shared'),
+      '@lib': path.resolve(__dirname, './src/lib'),
+      '@hooks': path.resolve(__dirname, './src/hooks'),
     },
   },
   plugins: [react()],

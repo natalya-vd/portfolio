@@ -1,0 +1,24 @@
+.title {
+  margin-bottom: var(--spacing-xl);
+}
+
+.text {
+  margin-bottom: var(--spacing-xl);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: auto 600px;
+  gap: var(--spacing-l);
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-l);
+}
+
+.skills__title {
+  margin-bottom: var(--spacing-sm);
+  color: var(--primary);
+}
