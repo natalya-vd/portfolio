@@ -1,6 +1,8 @@
 import { DetailedHTMLProps, ElementType, HTMLAttributes } from "react";
 import classNames from "classnames";
 
+import { Title } from "@components/title/Title";
+
 import { Button } from "@shared/button/Button";
 import { Card } from "@shared/card/Card";
 import { Chip } from "@shared/chip/Chip";
@@ -32,7 +34,7 @@ export const Project = ({ project, tag = 'div', className, ...props }: IProjectP
         </div>
 
         <div className={classNames(styles.content)}>
-          <h3 className="typography-body-large">{project.title}</h3>
+          <Title tag="h3">{project.title}</Title>
 
           <div className={classNames(styles['text-content'], "typography-body-medium")}>
             <p className={classNames(styles.description)}>{project.description}</p>

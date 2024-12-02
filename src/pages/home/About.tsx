@@ -1,6 +1,7 @@
 import classNames from "classnames";
 
 import { MarqueeSkills } from "@components/marquee-skills/MarqueeSkills";
+import { Title } from "@components/title/Title";
 
 import { hardSkills, hardSkillsSlider } from "./data/hard-skills";
 import styles from './About.module.css'
@@ -8,7 +9,7 @@ import styles from './About.module.css'
 export const About = (): JSX.Element => {
   return (
     <>
-      <h2 className={classNames(styles.title, 'typography-headline-large')}>Обо мне</h2>
+      <Title tag="h2">Обо мне</Title>
 
       <div className="typography-body-large">
         <p className={classNames(styles.text)}>
@@ -27,7 +28,7 @@ export const About = (): JSX.Element => {
 
             <div className={classNames(styles.skills)}>
               <div>
-                <h3 className={classNames(styles['skills__title'], 'typography-title-medium')}>Языки и технологии</h3>
+                <Title tag="h3" className={styles['skills__title']}>Языки и технологии</Title>
 
                 <ul>
                   {
@@ -40,7 +41,7 @@ export const About = (): JSX.Element => {
                 </ul>
               </div>
               <div>
-                <h3 className={classNames(styles['skills__title'], 'typography-title-medium')}>Фреймворки и библиотеки</h3>
+                <Title tag="h3" className={styles['skills__title']}>Фреймворки и библиотеки</Title>
 
                 <ul>
                   {
@@ -53,7 +54,7 @@ export const About = (): JSX.Element => {
                 </ul>
               </div>
               <div>
-                <h3 className={classNames(styles['skills__title'], 'typography-title-medium')}>Другое</h3>
+                <Title tag="h3" className={styles['skills__title']}>Другое</Title>
 
                 <ul>
                   {

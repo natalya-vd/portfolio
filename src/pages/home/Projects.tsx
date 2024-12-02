@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 
 import { Project } from '@components/project/Project';
+import { Title } from '@components/title/Title';
 
 import { projects } from './data/projects';
 import styles from './Projects.module.css'
@@ -8,7 +9,7 @@ import styles from './Projects.module.css'
 export const Projects = (): JSX.Element => {
   return (
     <>
-      <h2 className={classNames(styles.title, 'typography-headline-large')}>Проекты</h2>
+      <Title tag='h2'>Проекты</Title>
 
       <ul className={classNames(styles.projects)}>
         {projects.map((project, idx) => (
