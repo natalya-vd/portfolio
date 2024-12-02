@@ -1,0 +1,15 @@
+.wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-index-level-2);
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  background-color: #fff;
+  pointer-events: none;
+}

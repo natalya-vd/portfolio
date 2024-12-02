@@ -3,6 +3,7 @@ import classnames from 'classnames'
 
 import { Button } from "@shared/button/Button";
 import { useThemeContext } from "@contexts/theme/useContext";
+import { Cursor } from "@components/cursor/Cursor";
 import { Divider } from "@shared/divider/Divider";
 import { Switch } from "@shared/switch/Switch";
 
@@ -32,7 +33,9 @@ export const MainLayout = ({ children }: IMainLayoutProps): JSX.Element => {
         </div>
       </header>
 
-      <div className={classnames(styles.content)}>{children}</div>
+      <div className={classnames(styles.content)}>
+        {children}
+      </div>
 
       <footer className={classnames(styles.footer)}>
         <div className="container">
@@ -40,7 +43,7 @@ export const MainLayout = ({ children }: IMainLayoutProps): JSX.Element => {
             <div></div>
 
             <div>
-              <h2 className={classnames(styles['footer__title'], 'typography-title-medium')}>Контакты</h2>
+              <p className={classnames(styles['footer__title'], 'typography-title-medium')}>Контакты</p>
               <ul className={classnames(styles['footer__list'])}>
                 <li className={classnames(styles['footer__item'])}>
                   <span>Telegram</span>
@@ -59,6 +62,8 @@ export const MainLayout = ({ children }: IMainLayoutProps): JSX.Element => {
           </div>
         </div>
       </footer>
+
+      <Cursor />
     </div>
   );
 }
