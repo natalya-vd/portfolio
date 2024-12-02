@@ -1,0 +1,39 @@
+.block {
+  display: flex;
+  gap: var(--spacing-xxl);
+}
+
+.header-wrapper {
+  margin-bottom: var(--spacing-xl);
+}
+
+.subtitle {
+  color: var( --on-surface-variant);
+}
+
+.spacing {
+  margin-bottom: var(--spacing-xl);
+}
+
+.stack-title {
+  margin-bottom: var(--spacing-md);
+}
+
+.stack {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.img-wrapper {
+  width: 60%;
+  max-height: 60vh;
+  overflow: hidden;
+  flex: 1 0 auto;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}

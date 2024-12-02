@@ -6,6 +6,7 @@ import { MainLayout } from '@layouts/main-layout/MainLayout';
 import styles from './Home.module.css'
 import { Projects } from './Projects';
 import { About } from './About';
+import { Experience } from './Experience';
 
 export const HomePage = (): JSX.Element => {
   return (
@@ -23,15 +24,16 @@ export const HomePage = (): JSX.Element => {
         </section>
 
         <section className={classnames(styles['projects-section'], 'container')}>
+          <Experience />
+        </section>
+
+        <section className={classnames(styles['projects-section'], 'container')}>
           <Projects />
         </section>
 
         <section className={classnames(styles['projects-section'], 'container')}>
           <About />
         </section>
-
-        {/* <section>Опыт</section>
-        <section>Обо мне</section> */}
       </main>
     </MainLayout>
   );

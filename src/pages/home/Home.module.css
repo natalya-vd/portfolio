@@ -1,7 +1,7 @@
 .main-section {
   min-height: calc(100vh - 200px);
   margin-top: -60px;
-  margin-bottom: 80px;
+  margin-bottom: 160px;
   padding-top: 120px;
   color: var(--secondary-fixed);
   background-color: var(--on-secondary-fixed);
@@ -10,7 +10,8 @@
 }
 
 .main-section__wrapper {
-  width: 720px;
+  width: 700px;
+  padding: 0;
 }
 
 .main-section__title {
@@ -26,5 +27,5 @@
 }
 
 .projects-section {
-  margin-bottom: 80px;
+  margin-bottom: 160px;
 }

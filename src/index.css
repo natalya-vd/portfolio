@@ -1,5 +1,6 @@
 :root {
   --z-index-level-1: 100;
+  --z-index-level-2: 90;
 
   --opacity-highest: 0.1;
 }
@@ -30,16 +31,16 @@
   --on-secondary: #ffffff;
   --secondary-container: #e8def8;
   --on-secondary-container: #1d192b;
-  /* --primary-container: #21005D;
-  --on-primary-container: #00ffff; */
+  --secondary-fixed: #e8def8;
+  --on-secondary-fixed: #1d192b;
+
+  --tertiary: #7d5260;
 
   --surface: #fef7ff;
   --on-surface: #1d1b20;
   --surface-container-low: #f7f2fa;
   --surface-container-highest: #e6e0e9;
   --on-surface-variant: #49454f;
-  --secondary-fixed: #e8def8;
-  --on-secondary-fixed: #1d192b;
 
   --outline: #79747e;
   --outline-variant: #cac4d0;  
@@ -59,8 +60,8 @@
   --on-secondary-container: #e8def8;
   --secondary-fixed: #e8def8;
   --on-secondary-fixed: #1d192b;
-  /* --primary-container: #21005D;
-  --on-primary-container: #00ffff; */
+
+  --tertiary: #efb8c8;
 
   --surface: #141218;
   --on-surface: #e6e0e9;
@@ -81,7 +82,6 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  /* background-color: #242424; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -97,23 +97,10 @@ input {
   margin: 0;
 }
 
-/* a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-} */
-
 body {
   margin: 0;
   background-color: var(--surface);
   color: var(--on-surface);
-  /* display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh; */
 }
 
 .noise {
@@ -124,7 +111,6 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  /* z-index: -1; */
   width: 100%;
   height: 100%;
   background: url('/public/bg-noise.png') repeat;
@@ -132,48 +118,21 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 0 var(--spacing-xxl);
 }
 
-/* h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-} */
-
-/* @media (prefers-color-scheme: light) { */
-  /* :root {
-    color: #213547;
-    background-color: #ffffff;
-  } */
-
-
-  /* a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  } */
-/* } */
 
 /* Типографика */
 .typography-display-large {
