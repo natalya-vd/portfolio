@@ -1,0 +1,19 @@
+.container {
+  padding: var(--spacing-md) var(--spacing-l);
+}
+
+.marker {
+  position: relative;
+  padding-left: var(--spacing-xl);
+}
+
+.marker::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary);
+  transform: rotate(45deg);
+}
