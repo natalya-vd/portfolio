@@ -10,6 +10,7 @@ export const projects: ProjectShort[] = [
     role: 'Frontend разработчик',
     dateStart: '12.2021',
     dateEnd: '11.2022',
+    tagStyle: 'success'
   },
   {
     title: 'Rento',
@@ -20,5 +21,6 @@ export const projects: ProjectShort[] = [
     role: 'Frontend разработчик',
     dateStart: '06.2021',
     dateEnd: '05.2022',
+    tagStyle: 'success'
   }
 ]

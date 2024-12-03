@@ -2,11 +2,11 @@ import classnames from 'classnames'
 
 import { MainLayout } from '@layouts/main-layout/MainLayout';
 
-
-import styles from './Home.module.css'
 import { Projects } from './Projects';
 import { About } from './About';
 import { Experience } from './Experience';
+
+import styles from './Home.module.css'
 
 export const HomePage = (): JSX.Element => {
   return (

@@ -7,4 +7,5 @@ export interface ProjectShort {
   url?: string
   dateStart: string
   dateEnd?: string
+  tagStyle: 'primary' | 'secondary' | 'info' | 'error' | 'success'
 }
