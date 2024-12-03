@@ -5,7 +5,8 @@ export interface ProjectShort {
   'development-tools': string[]
   role: string
   url?: string
+  github?: string
   dateStart: string
   dateEnd?: string
-  tagStyle: 'primary' | 'secondary' | 'info' | 'error' | 'success'
+  type: 'pet' | 'commercial' | 'training'
 }

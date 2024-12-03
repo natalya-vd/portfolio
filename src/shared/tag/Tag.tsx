@@ -3,8 +3,10 @@ import { DetailedHTMLProps, HTMLAttributes } from "react";
 
 import styles from './Tag.module.css'
 
+export type TagType = 'primary' | 'secondary' | 'info' | 'error' | 'success'
+
 interface ITagProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  appearance?: 'primary' | 'secondary' | 'info' | 'error' | 'success'
+  appearance?: TagType
   text: string
 }
 

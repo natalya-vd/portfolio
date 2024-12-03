@@ -9,8 +9,20 @@ export const projects: ProjectShort[] = [
     'development-tools': ['React', 'Next.js', 'React-admin', 'TypeScript', 'Axios', 'Sass', 'EsLint', 'Prettier'],
     role: 'Frontend разработчик',
     dateStart: '12.2021',
-    dateEnd: '11.2022',
-    tagStyle: 'success'
+    dateEnd: '10.2023',
+    type: 'commercial'
+  },
+  {
+    title: 'BriskMeal',
+    url: 'https://www.briskmeal.ru/',
+    github: 'https://github.com/natalya-vd/BriskMeal/tree/develop',
+    description: 'BriskMeal - групповой учебный проект. Команда состояла из 5 человек - 3 frontend-разработчика, 1 backend-разработчик и 1 fullstack-разработчик. Работали по Agile. В данном проекте занималась бэкенд разработкой АПИ для пользовательского сайта и созданием админ-панели для наполнения контента сайта (фронт и бэк).',
+    image: '/public/projects/briskmeal.jpg',
+    'development-tools': [ 'Vue', 'Sass', 'Axios', 'Bootstrap', 'Laravel', 'Laravel UI', 'MySQL', 'Docker'],
+    role: 'Fullstack разработчик',
+    dateStart: '12.2022',
+    dateEnd: '02.2023',
+    type: 'training'
   },
   {
     title: 'Rento',
@@ -21,6 +33,6 @@ export const projects: ProjectShort[] = [
     role: 'Frontend разработчик',
     dateStart: '06.2021',
     dateEnd: '05.2022',
-    tagStyle: 'success'
+    type: 'commercial'
   }
 ]

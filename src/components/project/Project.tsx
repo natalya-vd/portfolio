@@ -6,7 +6,7 @@ import { Title } from "@components/title/Title";
 import { Button } from "@shared/button/Button";
 import { Card } from "@shared/card/Card";
 import { Chip } from "@shared/chip/Chip";
-import { Tag } from "@shared/tag/Tag";
+import { Tag, TagType } from "@shared/tag/Tag";
 
 import { ProjectShort } from "./types";
 import styles from './Project.module.css'
@@ -27,19 +27,21 @@ export const Project = ({ project, tag = 'div', className, ...props }: IProjectP
     return date
   }
 
-  const getTagText = (tagType: string): string => {
-    const appearance: Record<string, string> = {
-      success: 'Коммерческий проект',
-      info: 'Pet-проект',
-      primary: 'Учебный проект',
+  const getTagInfo = (tagType: string): [string, TagType] => {
+    const appearance: Record<string, [string, TagType]> = {
+      commercial: ['Коммерческий проект', 'success'],
+      pet: ['Pet-проект', 'info'],
+      training: ['Учебный проект', 'primary'],
     }
 
     return appearance[tagType]
   }
 
+  const tagInfo = getTagInfo(project.type)
+
   return (
     <Component className={classNames(className)} {...props}>
-      <Tag text={getTagText(project.tagStyle)} appearance={project.tagStyle}>
+      <Tag text={tagInfo[0]} appearance={tagInfo[1]}>
         <Card type="outlined" className={classNames(styles.card)}>
           <div className={classNames(styles['media-wrapper'])}>
             <img className={classNames(styles.media)} src={project.image} alt={project.title} />
@@ -61,8 +63,11 @@ export const Project = ({ project, tag = 'div', className, ...props }: IProjectP
               <p><span className="typography-title-medium">Даты участия:</span> {getDates()}</p>
             </div>
             <div className={classNames(styles.actions)}>
+              {project.github && (
+                <Button appearance="filled" href={project.github} target="_blank">GitHub</Button>
+              )}
               {project.url && (
-                <Button appearance="filled" href={project.url}>Посетить</Button>
+                <Button appearance="filled" href={project.url} target="_blank">Сайт</Button>
               )}
             </div>
           </div>
