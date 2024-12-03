@@ -27,9 +27,19 @@ export const Project = ({ project, tag = 'div', className, ...props }: IProjectP
     return date
   }
 
+  const getTagText = (tagType: string): string => {
+    const appearance: Record<string, string> = {
+      success: 'Коммерческий проект',
+      info: 'Pet-проект',
+      primary: 'Учебный проект',
+    }
+
+    return appearance[tagType]
+  }
+
   return (
     <Component className={classNames(className)} {...props}>
-      <Tag text="Коммерческий проект" appearance={project.tagStyle}>
+      <Tag text={getTagText(project.tagStyle)} appearance={project.tagStyle}>
         <Card type="outlined" className={classNames(styles.card)}>
           <div className={classNames(styles['media-wrapper'])}>
             <img className={classNames(styles.media)} src={project.image} alt={project.title} />
