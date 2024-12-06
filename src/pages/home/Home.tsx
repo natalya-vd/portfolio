@@ -1,6 +1,7 @@
 import classnames from 'classnames'
 
 import { MainLayout } from '@layouts/main-layout/MainLayout';
+import { BracketAnimation } from '@components/bracket-animation/BracketAnimation';
 
 import { Projects } from './Projects';
 import { About } from './About';
@@ -16,10 +17,12 @@ export const HomePage = (): JSX.Element => {
           <div className={classnames(styles['main-section__wrapper'], 'container')}>
             <p className={classnames(styles['main-section__title'])}>Наталья</p>
             <p className={classnames(styles['main-section__title'])}>Вдовыдченко -</p>
-            <h1 className={classnames(styles['main-section__subtitle'], 'typography-display-small')}>
-              frontend разработчик
-              <span>{"{ }"}</span>
-            </h1>
+            <div className={classnames(styles['main-section__subtitle'], 'typography-display-small')}>
+              <h1>
+                frontend разработчик
+              </h1>
+              <BracketAnimation />
+            </div>
           </div>
         </section>
 

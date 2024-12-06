@@ -23,6 +23,8 @@
 }
 
 .main-section__subtitle {
+  display: flex;
+  gap: var(--spacing-xl);
   margin-left: 50px;
 }
 
