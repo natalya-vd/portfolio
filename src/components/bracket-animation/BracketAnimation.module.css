@@ -1,5 +1,5 @@
 .bracket-animation {
-  animation: bracket 3s ease-in infinite both;
+  animation: bracket 3s ease-in both;
 }
 
 @keyframes bracket {

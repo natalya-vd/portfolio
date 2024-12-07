@@ -26,13 +26,19 @@ export const HomePage = (): JSX.Element => {
           </div>
         </section>
 
+        <div className='scroll-to-element' id="experience" />
+
         <section className={classnames(styles['projects-section'], 'container')}>
           <Experience />
         </section>
 
+        <div className='scroll-to-element' id="projects" />
+
         <section className={classnames(styles['projects-section'], 'container')}>
           <Projects />
         </section>
+
+        <div className='scroll-to-element' id="about" />
 
         <section className={classnames(styles['projects-section'], 'container')}>
           <About />

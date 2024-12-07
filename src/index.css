@@ -102,18 +102,22 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  text-decoration: none;
-}
-
-input {
-  margin: 0;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   background-color: var(--surface);
   color: var(--on-surface);
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  margin: 0;
 }
 
 .noise {
@@ -128,6 +132,11 @@ body {
   height: 100%;
   background: url('/public/bg-noise.png') repeat;
   opacity: var(--opacity-noise);
+}
+
+.scroll-to-element {
+  height: 60px;
+  margin-top: -60px;
 }
 
 .container {
