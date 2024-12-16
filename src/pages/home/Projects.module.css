@@ -1,5 +1,6 @@
 .projects {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, min(calc(100% / 3 - 2 / 3* var(--spacing-xl)), 700px));
+  justify-content: center;
   gap: var(--spacing-xl);
 }

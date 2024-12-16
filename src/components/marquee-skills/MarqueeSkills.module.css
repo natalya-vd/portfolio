@@ -4,7 +4,7 @@
   flex-direction: column;
   gap: var(--spacing-xl);
   justify-content: center;
-  width: 500px;
+  max-width: 700px;
   overflow: hidden;
 }
 
@@ -20,12 +20,12 @@
 }
 
 .wrapper::before {
-  left: 0;
+  left: -4px;
   transform: rotateZ(180deg);
 }
 
 .wrapper:after {
-  right: 0;
+  right: -4px;
 }
 
 .marquee-container {

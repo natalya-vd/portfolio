@@ -21,7 +21,7 @@ export const Button = forwardRef(
     return (
       href ? (
         <a
-          className={classNames(classes, styles.container, styles.state, className)}
+          className={classNames(classes, styles.container, styles.state, className, 'typography-label-large')}
           href={href}
           ref={ref as Ref<HTMLAnchorElement>}
           {...props}
@@ -31,7 +31,7 @@ export const Button = forwardRef(
       )
         : (
           <button
-            className={classNames(classes, styles.container, className)}
+            className={classNames(classes, styles.container, className, 'typography-label-large')}
             ref={ref as Ref<HTMLButtonElement>}
             {...props}
           >

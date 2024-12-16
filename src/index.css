@@ -7,11 +7,11 @@
 }
 
 :root {
-  --spacing-sm: 4px;
-  --spacing-md: 8px;
-  --spacing-l: 16px;
-  --spacing-xl: 24px;
-  --spacing-xxl: 32px;
+  --spacing-sm: 0.25em;
+  --spacing-md: 0.5em;
+  --spacing-l: 1em;
+  --spacing-xl: 1.5em;
+  --spacing-xxl: 2em;
 }
 
 :root {
@@ -110,6 +110,19 @@ body {
   margin: 0;
   background-color: var(--surface);
   color: var(--on-surface);
+  font-size: 14px;
+}
+
+@media (min-width: 599px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1899px) {
+  body {
+    font-size: 24px;
+  }
 }
 
 a {
@@ -140,7 +153,6 @@ input {
 }
 
 .container {
-  max-width: 1400px;
   margin: 0 auto;
   padding: 0 var(--spacing-xxl);
 }
@@ -159,98 +171,98 @@ input {
 /* Типографика */
 .typography-display-large {
   font-weight: 400;
-  font-size: 57px;
+  font-size: 3.56em;
   line-height: 112%;
   letter-spacing: 0em;
 }
 
 .typography-display-medium {
   font-weight: 400;
-  font-size: 45px;
+  font-size: 2.81em;
   line-height: 116%;
 }
 
 .typography-display-small {
   font-weight: 400;
-  font-size: 36px;
+  font-size: 2.25em;
   line-height: 122%;
 }
 
 .typography-headline-large {
   font-weight: 400;
-  font-size: 32px;
+  font-size: 2em;
   line-height: 125%;
 }
 
 .typography-headline-medium {
   font-weight: 400;
-  font-size: 28px;
+  font-size: 1.75em;
   line-height: 129%;
 }
 
 .typography-headline-small {
   font-weight: 400;
-  font-size: 24px;
+  font-size: 1.5em;
   line-height: 133%;
 }
 
 .typography-title-large {
   font-weight: 400;
-  font-size: 22px;
+  font-size: 1.38em;
   line-height: 127%;
 }
 
 .typography-title-medium {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1em;
   line-height: 150%;
   letter-spacing: 0.01em;
 }
 
 .typography-title-small {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875em;
   line-height: 143%;
   letter-spacing: 0.01em;
 }
 
 .typography-label-large {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875em;
   line-height: 143%;
   letter-spacing: 0.01em;
 }
 
 .typography-label-medium {
   font-weight: 500;
-  font-size: 12px;
+  font-size: 0.75em;
   line-height: 133%;
   letter-spacing: 0.04em;
 }
 
 .typography-label-small {
   font-weight: 500;
-  font-size: 11px;
+  font-size: 0.688em;
   line-height: 145%;
   letter-spacing: 0.05em;
 }
 
 .typography-body-large {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1em;
   line-height: 150%;
   letter-spacing: 0.03em;
 }
 
 .typography-body-medium {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875em;
   line-height: 143%;
   letter-spacing: 0.02em;
 }
 
 .typography-body-small {
   font-weight: 400;
-  font-size: 12px;
+  font-size: 0.75em;
   line-height: 133%;
 }

@@ -9,7 +9,7 @@
   top: 0;
   left: 0;
   z-index: var(--z-index-level-1);
-  height: 60px;
+  height: 3.75em;
   width: 100%;
   backdrop-filter: blur(8px);
 }

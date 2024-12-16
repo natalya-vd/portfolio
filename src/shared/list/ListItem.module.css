@@ -10,7 +10,7 @@
 .marker::before {
   content: '';
   position: absolute;
-  top: 12px;
+  top: 0.75em;
   left: 4px;
   width: 8px;
   height: 8px;
