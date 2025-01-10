@@ -26,7 +26,7 @@ export const MainLayout = ({ children }: IMainLayoutProps): JSX.Element => {
     <div className={classnames(styles.wrapper)}>
       <header className={classnames(styles.header)}>
         <div className={classnames(styles['header-wrapper'], 'container')}>
-          <nav className={classnames(styles.navigation)}>
+          <nav className={classnames(styles['navigation-desktop'])}>
             <Button href="/#experience" appearance="text">Опыт</Button>
             <Button href="/#projects" appearance="text">Проекты</Button>
             <Button href="/#about" appearance="text">Обо мне</Button>

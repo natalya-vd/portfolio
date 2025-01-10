@@ -3,16 +3,12 @@
   gap: var(--spacing-xxl);
 }
 
-.header-wrapper {
-  margin-bottom: var(--spacing-xl);
-}
-
 .subtitle {
   color: var( --on-surface-variant);
 }
 
 .spacing {
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-l);
 }
 
 .stack-title {
@@ -21,10 +17,12 @@
 
 .stack {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--spacing-md);
 }
 
 .img-wrapper {
+  display: none;
   width: 60%;
   max-height: 60vh;
   overflow: hidden;
@@ -37,4 +35,16 @@
   display: block;
   object-fit: cover;
   object-position: top;
+}
+
+@media (min-width: 576px) {
+  .spacing {
+    margin-bottom: var(--spacing-xl);
+  }
+}
+
+@media (min-width: 1200px) {
+  .img-wrapper {
+    display: block;
+  }
 }

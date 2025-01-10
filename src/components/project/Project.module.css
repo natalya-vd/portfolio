@@ -5,8 +5,8 @@
 }
 
 .media-wrapper {
-  flex: 1 0 100%;
-  max-height: 370px;
+  flex: 0 0 23.125em;
+  height: 23.125em;
 }
 
 .media {

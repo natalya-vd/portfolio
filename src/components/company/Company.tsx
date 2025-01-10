@@ -32,7 +32,7 @@ export const Company = ({ company, mediaAppearance, className, ...props }: IComp
       {mediaAppearance === 'left' && <CompanyMedia src={company.img} alt={company.name} />}
 
       <div>
-        <div className={classNames(styles['header-wrapper'])}>
+        <div className={classNames(styles.spacing)}>
           <Title tag="h3">{company.name}</Title>
           <p className={classNames(styles.subtitle, 'typography-body-medium')}>{company.date}</p>
         </div>

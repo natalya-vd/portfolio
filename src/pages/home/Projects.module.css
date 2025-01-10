@@ -1,6 +1,18 @@
 .projects {
   display: grid;
-  grid-template-columns: repeat(3, min(calc(100% / 3 - 2 / 3* var(--spacing-xl)), 700px));
+  grid-template-columns: 1fr;
   justify-content: center;
-  gap: var(--spacing-xl);
+  gap: calc(2* var(--spacing-xxl)) var(--spacing-xxl);
+}
+
+@media (min-width: 768px) {
+  .projects {
+    grid-template-columns: repeat(2, min(calc(100% / 2 - 1 / 2 * var(--spacing-xxl)), 500px));
+  }
+}
+
+@media (min-width: 1400px) {
+  .projects {
+    grid-template-columns: repeat(3, min(calc(100% / 3 - 2 / 3 * var(--spacing-xxl)), 700px));
+  }
 }

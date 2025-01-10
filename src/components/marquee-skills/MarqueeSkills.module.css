@@ -5,6 +5,7 @@
   gap: var(--spacing-xl);
   justify-content: center;
   max-width: 700px;
+  min-height: 200px;
   overflow: hidden;
 }
 

@@ -113,18 +113,6 @@ body {
   font-size: 14px;
 }
 
-@media (min-width: 599px) {
-  body {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 1899px) {
-  body {
-    font-size: 24px;
-  }
-}
-
 a {
   text-decoration: none;
 }
@@ -148,13 +136,13 @@ input {
 }
 
 .scroll-to-element {
-  height: 60px;
-  margin-top: -60px;
+  height: 3.75em;
+  margin-top: -3.75em;
 }
 
 .container {
   margin: 0 auto;
-  padding: 0 var(--spacing-xxl);
+  padding: 0 var(--spacing-l);
 }
 
 .visually-hidden {
@@ -265,4 +253,20 @@ input {
   font-weight: 400;
   font-size: 0.75em;
   line-height: 133%;
+}
+
+@media (min-width: 576px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 0 var(--spacing-xxl);
+  }
+}
+
+@media (min-width: 1900px) {
+  body {
+    font-size: 24px;
+  }
 }

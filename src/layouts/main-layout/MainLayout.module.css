@@ -22,12 +22,8 @@
   height: inherit;
 }
 
-.navigation {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 10px;
-  height: 100%;
+.navigation-desktop {
+  display: none;
 }
 
 .divider {
@@ -72,4 +68,18 @@
 .footer__icon_github {
   background-color: #fff;
   border-radius: 50%;
+}
+
+@media (min-width: 576px) {
+  .navigation-desktop {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+  }
+
+  .navigation-mobile {
+    display: none;
+  }
 }
